@@ -1,10 +1,11 @@
 import requests
 
-url = "https://rugby-live-data.p.rapidapi.com/fixtures/1272/2024"
+url = "https://v1.rugby.api-sports.io/"
 
+payload={}
 headers = {
-	"X-RapidAPI-Key": "cdeaaf4e02mshffcfe442dc1cba2p14985ajsndb3fa3629176",
-	"X-RapidAPI-Host": "rugby-live-data.p.rapidapi.com"
+  'x-rapidapi-key': 'd74a21af68fba812a78cb2974b11af00',
+  'x-rapidapi-host': 'v1.rugby.api-sports.io'
 }
 
 response = requests.get(url, headers=headers)

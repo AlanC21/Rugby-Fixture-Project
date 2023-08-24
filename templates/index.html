@@ -1,11 +1,35 @@
 {% extends './layout.html' %} {% block title %} Rugby Fixture {% endblock %} {%
 block body %}
-<ul>
-  {% for r in data.results %}
-  <li>
-    {{ r.home }} vs {{ r.away }} - {{ r.date }} - {{ r.status }}
-    -{{r.home_score}} - {{ r.away_score }} - {{ r.venue }}
-  </li>
-  {% endfor%}
-</ul>
+<div
+  id="wg-api-rugby-games"
+  data-host="v1.rugby.api-sports.io"
+  data-key="d74a21af68fba812a78cb2974b11af00"
+  data-date=""
+  data-league="69"
+  data-season="2023"
+  data-theme=""
+  data-refresh="15"
+  data-show-toolbar="true"
+  data-show-errors="false"
+  data-show-logos="true"
+  data-modal-game="true"
+  data-modal-standings="true"
+  data-modal-show-logos="true"
+></div>
+<div
+  id="wg-api-rugby-standings"
+  data-host="v1.rugby.api-sports.io"
+  data-key="d74a21af68fba812a78cb2974b11af00"
+  data-league="69"
+  data-season="2023"
+  data-theme=""
+  data-show-errors="false"
+  data-show-logos="true"
+  class="wg_loader"
+></div>
+<script
+  type="module"
+  src="https://widgets.api-sports.io/2.0.3/widgets.js"
+></script>
+
 {% endblock %}
