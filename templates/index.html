@@ -1,0 +1,11 @@
+{% extends './layout.html' %} {% block title %} Rugby Fixture {% endblock %} {%
+block body %}
+<ul>
+  {% for r in data.results %}
+  <li>
+    {{ r.home }} vs {{ r.away }} - {{ r.date }} - {{ r.status }}
+    -{{r.home_score}} - {{ r.away_score }} - {{ r.venue }}
+  </li>
+  {% endfor%}
+</ul>
+{% endblock %}
