@@ -38,267 +38,45 @@ block body %}
   <div class="information-img"></div>
 </section>
 <section class="standing">
+  {% for table in standings%}
   <div class="card">
     <div class="card-header">
-      <h3>Grupo A</h3>
+      <h3>{{ table.table_name }}</h3>
     </div>
     <div class="card-content">
       <div class="card-subheader">
         <p>PL</p>
         <p>PTS</p>
       </div>
+      {% for team in table.teams%}
       <div class="card-match">
         <div>
           <img src="../static/img/Uar_rugby_logo23.png" alt="">
-          <h4>New Zealand</h4>
+          <h4>{{ team.name }}</h4>
         </div>
         <div>
-          <p>0</p>
-          <b>0</b>
+          <p>{{ team.played }}</p>
+          <b>{{ team.points }}</b>
         </div>
       </div>
-      <div class="card-match">
-        <div>
-          <img src="../static/img/Uar_rugby_logo23.png" alt="">
-          <h4>New Zealand</h4>
-        </div>
-        <div>
-          <p>0</p>
-          <b>0</b>
-        </div>
-      </div>
-      <div class="card-match">
-        <div>
-          <img src="../static/img/Uar_rugby_logo23.png" alt="">
-          <h4>New Zealand</h4>
-        </div>
-        <div>
-          <p>0</p>
-          <b>0</b>
-        </div>
-      </div>
-      <div class="card-match">
-        <div>
-          <img src="../static/img/Uar_rugby_logo23.png" alt="">
-          <h4>New Zealand</h4>
-        </div>
-        <div>
-          <p>0</p>
-          <b>0</b>
-        </div>
-      </div>
-      <div class="card-match">
-        <div>
-          <img src="../static/img/Uar_rugby_logo23.png" alt="">
-          <h4>New Zealand</h4>
-        </div>
-        <div>
-          <p>0</p>
-          <b>0</b>
-        </div>
-      </div>
+      {% endfor %}
     </div>
   </div>
-  <div class="card">
-    <div class="card-header">
-      <h3>Grupo A</h3>
-    </div>
-    <div class="card-content">
-      <div class="card-subheader">
-        <p>PL</p>
-        <p>PTS</p>
-      </div>
-      <div class="card-match">
-        <div>
-          <img src="../static/img/Uar_rugby_logo23.png" alt="">
-          <h4>New Zealand</h4>
-        </div>
-        <div>
-          <p>0</p>
-          <b>0</b>
-        </div>
-      </div>
-      <div class="card-match">
-        <div>
-          <img src="../static/img/Uar_rugby_logo23.png" alt="">
-          <h4>New Zealand</h4>
-        </div>
-        <div>
-          <p>0</p>
-          <b>0</b>
-        </div>
-      </div>
-      <div class="card-match">
-        <div>
-          <img src="../static/img/Uar_rugby_logo23.png" alt="">
-          <h4>New Zealand</h4>
-        </div>
-        <div>
-          <p>0</p>
-          <b>0</b>
-        </div>
-      </div>
-      <div class="card-match">
-        <div>
-          <img src="../static/img/Uar_rugby_logo23.png" alt="">
-          <h4>New Zealand</h4>
-        </div>
-        <div>
-          <p>0</p>
-          <b>0</b>
-        </div>
-      </div>
-      <div class="card-match">
-        <div>
-          <img src="../static/img/Uar_rugby_logo23.png" alt="">
-          <h4>New Zealand</h4>
-        </div>
-        <div>
-          <p>0</p>
-          <b>0</b>
-        </div>
-      </div>
-    </div>
-  </div>
-  </div>
-  <div class="card">
-    <div class="card-header">
-      <h3>Grupo A</h3>
-    </div>
-    <div class="card-content">
-      <div class="card-subheader">
-        <p>PL</p>
-        <p>PTS</p>
-      </div>
-      <div class="card-match">
-        <div>
-          <img src="../static/img/Uar_rugby_logo23.png" alt="">
-          <h4>New Zealand</h4>
-        </div>
-        <div>
-          <p>0</p>
-          <b>0</b>
-        </div>
-      </div>
-      <div class="card-match">
-        <div>
-          <img src="../static/img/Uar_rugby_logo23.png" alt="">
-          <h4>New Zealand</h4>
-        </div>
-        <div>
-          <p>0</p>
-          <b>0</b>
-        </div>
-      </div>
-      <div class="card-match">
-        <div>
-          <img src="../static/img/Uar_rugby_logo23.png" alt="">
-          <h4>New Zealand</h4>
-        </div>
-        <div>
-          <p>0</p>
-          <b>0</b>
-        </div>
-      </div>
-      <div class="card-match">
-        <div>
-          <img src="../static/img/Uar_rugby_logo23.png" alt="">
-          <h4>New Zealand</h4>
-        </div>
-        <div>
-          <p>0</p>
-          <b>0</b>
-        </div>
-      </div>
-      <div class="card-match">
-        <div>
-          <img src="../static/img/Uar_rugby_logo23.png" alt="">
-          <h4>New Zealand</h4>
-        </div>
-        <div>
-          <p>0</p>
-          <b>0</b>
-        </div>
-      </div>
-    </div>
-  </div>
-  </div>
-  <div class="card">
-    <div class="card-header">
-      <h3>Grupo A</h3>
-    </div>
-    <div class="card-content">
-      <div class="card-subheader">
-        <p>PL</p>
-        <p>PTS</p>
-      </div>
-      <div class="card-match">
-        <div>
-          <img src="../static/img/Uar_rugby_logo23.png" alt="">
-          <h4>New Zealand</h4>
-        </div>
-        <div>
-          <p>0</p>
-          <b>0</b>
-        </div>
-      </div>
-      <div class="card-match">
-        <div>
-          <img src="../static/img/Uar_rugby_logo23.png" alt="">
-          <h4>New Zealand</h4>
-        </div>
-        <div>
-          <p>0</p>
-          <b>0</b>
-        </div>
-      </div>
-      <div class="card-match">
-        <div>
-          <img src="../static/img/Uar_rugby_logo23.png" alt="">
-          <h4>New Zealand</h4>
-        </div>
-        <div>
-          <p>0</p>
-          <b>0</b>
-        </div>
-      </div>
-      <div class="card-match">
-        <div>
-          <img src="../static/img/Uar_rugby_logo23.png" alt="">
-          <h4>New Zealand</h4>
-        </div>
-        <div>
-          <p>0</p>
-          <b>0</b>
-        </div>
-      </div>
-      <div class="card-match">
-        <div>
-          <img src="../static/img/Uar_rugby_logo23.png" alt="">
-          <h4>New Zealand</h4>
-        </div>
-        <div>
-          <p>0</p>
-          <b>0</b>
-        </div>
-      </div>
-    </div>
-  </div>
-  </div>
+  {% endfor %}
 </section>
 <section class="matches">
   <h2>Partidos</h2>
-  {% for r in data.results %}
+  {% for fixture in fixtures %}
   <div class="match">
     <div class="matches-a">
-      <p>{{ r.date }}</p>
+      <p>{{ fixture.date }}</p>
     </div>
     <div class="matches-b">
-      <p>{{ r.home }} vs {{ r.away }}</p>
-      <p>{{r.home_score}} - {{ r.away_score }}</p>      
+      <p>{{ fixture.home }} vs {{ fixture.away }}</p>
+      <p>{{ fixture.home_score }} - {{ fixture.away_score }}</p>      
     </div>
     <div class="matches-c">
-      <p>{{ r.venue }}</p>
+      <p>{{ fixture.venue }}</p>
     </div>
   </div>
   {% endfor%}
