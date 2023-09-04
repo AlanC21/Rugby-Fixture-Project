@@ -51,7 +51,7 @@ block body %}
       {% for team in table.teams%}
       <div class="card-match">
         <div>
-          <img src="../static/img/Uar_rugby_logo23.png" alt="">
+          <img src="{{ url_for('static', filename='logos/' + team_logos[team.name]) }}" alt="{{ team.name }} Logo"></td>
           <h4>{{ team.name }}</h4>
         </div>
         <div>

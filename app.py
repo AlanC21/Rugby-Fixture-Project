@@ -1,6 +1,8 @@
 from flask import Flask, render_template
 from datetime import datetime
+import pytz 
 import requests
+from dateutil import parser
 
 app = Flask(__name__)
 
@@ -10,7 +12,7 @@ def index():
     url_fixture = "https://rugby-live-data.p.rapidapi.com/fixtures/1272/2024"
 
     headers = {
-	    "X-RapidAPI-Key": "41ad73a184msh813945241c52d19p17560ejsnf7916cd400ea",
+	    "X-RapidAPI-Key": "124e2b01camsh8d5352d725e4cdbp108b62jsne7ea5dc22142",
 	    "X-RapidAPI-Host": "rugby-live-data.p.rapidapi.com"
     }
 
@@ -24,10 +26,11 @@ def index():
     fixtures = data_fixture['results']
     
     for result in fixtures:
-        date_str = result['date']
-        date = datetime.strptime(date_str, "%Y-%m-%dT%H:%M:%S%z")
-        formatted_date = date.strftime("%d de %B de %Y, %H:%M %Z")
-        result['date'] = formatted_date
+            parsed_time = parser.parse(result["date"])
+            est_time = parsed_time.astimezone(pytz.timezone('America/Argentina/Buenos_Aires'))
+            result["date"] = est_time.strftime('%d de %B de %Y %H:%Mhrs')
+        
+
 
     groups_mapping = {
         "Pool A": "Grupo A",
@@ -36,10 +39,33 @@ def index():
         "Pool D": "Grupo D"
     }
 
+    team_logos = {
+        "New Zealand": "new_zealand.png",
+        "France": "france.png",
+        "Italy": "italy.png",
+        "Uruguay": "uruguay.png",
+        "Namibia": "namibia.png",
+        "South Africa": "south_africa.svg",
+        "Ireland": "ireland.png",
+        "Scotland": "scotland.png",
+        "Tonga": "tonga.png",
+        "Romania": "romania.png",
+        "Wales": "wales.png",
+        "Australia": "australia.png",
+        "Fiji": "fiji.png",
+        "Georgia": "georgia.png",
+        "Portugal": "portugal.png",
+        "England": "england.png",
+        "Japan": "japan.png",
+        "Argentina": "argentina.png",
+        "Samoa": "samoa.png",
+        "Chile": "chile.png",
+    }   
+
     for table in standings:
         table["table_name"] = groups_mapping.get(table["table_name"], table["table_name"])
 
-    return render_template('index.html', standings=standings, fixtures=fixtures)
+    return render_template('index.html', standings=standings, fixtures=fixtures, team_logos=team_logos)
 
 def pageNoFound(error):
     return render_template('404.html'), 404
