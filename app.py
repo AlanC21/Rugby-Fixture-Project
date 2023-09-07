@@ -1,5 +1,4 @@
 from flask import Flask, render_template
-from datetime import datetime
 import pytz 
 import requests
 from dateutil import parser
