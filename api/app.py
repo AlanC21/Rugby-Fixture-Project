@@ -71,4 +71,4 @@ def pageNoFound(error):
 
 if __name__ == '__main__':
     app.register_error_handler(404, pageNoFound)
-    app.run(debug=True, port=4000)
+    app.run(debug=True)
