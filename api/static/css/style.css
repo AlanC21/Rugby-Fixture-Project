@@ -8,22 +8,6 @@
     src: url(../fonts/Gotham-font-family/Gotham/Gotham-Light.otf);
 }
 
-.elementor-kit-7 {
-    --e-global-color-primary: #6EA9DC;
-    --e-global-color-secondary: #54595F;
-    --e-global-color-text: #000000;
-    --e-global-color-accent: #61CE70;
-    --e-global-color-bef2cb1: #003051;
-    --e-global-color-747d224: #003051;
-    --e-global-color-04827e9: #FFD600;
-    --e-global-color-beb87cb: #CD9D2B;
-    --e-global-color-ef2e32f: #545454;
-    --e-global-color-cec15c4: #FFFFFF;
-    --e-global-color-610c1a0: #000000;
-    --e-global-color-bc274e5: #2A353E;
-    --e-global-color-2da287b: #F0F0F0;
-}
-
 * {
     font-family: inherit;
     box-sizing: border-box;
@@ -214,9 +198,8 @@ ul li a {
 }
 
 .card {
-    width: 300px;
+    width: 318px;
     backdrop-filter: blur(15px);
-    transition: 1s;
     box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.15);
     font-family: Gotham-Light;
 }
@@ -257,10 +240,14 @@ ul li a {
 .card-subheader {
     text-align: end;
     font-size: 12px;
-    margin-bottom: 16px;
+    margin-right: 4px;
     display: flex;
-    gap: 10px;
+    gap: 18px;
     justify-content: end;
+}
+
+.card-subheader p {
+    width: 10px;
 }
 
 .card-match {
@@ -283,7 +270,10 @@ ul li a {
 .card-match div {
     gap: 18px;
     display: flex;
-    padding-right: 4px;
+}
+
+.card-match div p {
+    width: 10px;
 }
 
 .card-match .img {
@@ -342,6 +332,19 @@ ul li a {
 .matches-b {
     width: 340px;
     font-size: 18px;
+}
+
+.matches-b p:nth-last-child(2){
+    color: #CD9D2B;
+    font-family: Gotham-Light;
+    padding: 2px 0;
+}
+
+.matches-b p:nth-last-child(1){
+    background: #fff;
+    display: inline;
+    color: #19194b;
+    padding: 0px 16px;
 }
 
 .matches-c {
@@ -415,7 +418,7 @@ footer {
     }
 
     .matches-a, .matches-b, .matches-c {
-        width: auto;
-        padding: 0 20px;
+        width: 125px;
+        padding: 0 10px;
     }
 }
