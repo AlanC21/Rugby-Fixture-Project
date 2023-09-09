@@ -339,13 +339,13 @@ ul a {
     font-size: 18px;
 }
 
-.matches-b p:nth-last-child(2){
+.matches-b p:nth-last-child(2) {
     color: #CD9D2B;
     font-family: Gotham-Light;
     padding: 2px 0;
 }
 
-.matches-b p:nth-last-child(1){
+.matches-b p:nth-last-child(1) {
     background: #fff;
     display: inline;
     color: #19194b;
