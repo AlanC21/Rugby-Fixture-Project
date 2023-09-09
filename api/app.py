@@ -28,7 +28,7 @@ def index():
         "Not Started": "No iniciado",
         "First Half": "Primer tiempo",
         "HalfTime": "Medio tiempo",
-        "Second Half": "Segundo tiempo",
+        "Second half": "Segundo tiempo",
         "Full Time": "Finalizado",
         "Postponed": "Pospuesto",
         "Cancelled": "Cancelado",
