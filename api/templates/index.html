@@ -46,6 +46,9 @@ block body %}
     <div class="card-content">
       <div class="card-subheader">
         <p>PL</p>
+        <p>PG</p>
+        <p>PE</p>
+        <p>PP</p>
         <p>PTS</p>
       </div>
       {% for team in table.teams%}
@@ -56,6 +59,9 @@ block body %}
         </div>
         <div>
           <p>{{ team.played }}</p>
+          <p>{{ team.won }}</p>
+          <p>{{ team.drawn }}</p>
+          <p>{{ team.lost }}</p>
           <b>{{ team.points }}</b>
         </div>
       </div>
@@ -73,6 +79,7 @@ block body %}
     </div>
     <div class="matches-b">
       <p>{{ fixture.home }} vs {{ fixture.away }}</p>
+      <p>{{ fixture.status }}</p>
       <p>{{ fixture.home_score }} - {{ fixture.away_score }}</p>      
     </div>
     <div class="matches-c">

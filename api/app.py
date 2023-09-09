@@ -24,10 +24,22 @@ def index():
     data_fixture = response_fixture.json()
     fixtures = data_fixture['results']
     
+    status_mapping = {
+        "Not Started": "No iniciado",
+        "First Half": "Primer tiempo",
+        "Half Time": "Medio tiempo",
+        "Second Half": "Segundo tiempo",
+        "Full Time": "Finalizado",
+        "Postponed": "Pospuesto",
+        "Cancelled": "Cancelado",
+        "Result": "Resultado",
+    }
+    
     for result in fixtures:
             parsed_time = parser.parse(result["date"])
             est_time = parsed_time.astimezone(pytz.timezone('America/Argentina/Buenos_Aires'))
             result["date"] = est_time.strftime('%d de %B de %Y %H:%Mhrs')
+            result["status"] = status_mapping.get(result["status"], result["status"])
         
 
 
@@ -59,7 +71,8 @@ def index():
         "Argentina": "Argentina.png",
         "Samoa": "Samoa.png",
         "Chile": "Chile.png",
-    }   
+    }
+
 
     for table in standings:
         table["table_name"] = groups_mapping.get(table["table_name"], table["table_name"])
