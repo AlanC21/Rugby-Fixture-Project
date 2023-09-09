@@ -1,0 +1,487 @@
+@font-face {
+    font-family: Gotham;
+    src: url(../fonts/Gotham-font-family/Gotham/Gotham-Medium.otf);
+}
+
+@font-face {
+    font-family: Gotham-Light;
+    src: url(../fonts/Gotham-font-family/Gotham/Gotham-Light.otf);
+}
+
+* {
+    font-family: inherit;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Gotham;
+    overflow-x: hidden;
+    color: #19194b;
+}
+
+b {
+    font-family: Gotham;
+}
+
+header {
+    width: 100%;
+    height: 81.3px;
+}
+
+nav {
+    width: 100%;
+    height: 81.3px;
+    display: flex;
+    align-items: center;
+    background: #fff;
+    z-index: 15;
+    position: fixed;
+    transition: .5s;
+    box-shadow: -8px 8px 16px 0px rgba(0, 0, 0, 0.15);
+}
+
+nav img {
+    height: 100%;
+    padding: 11.4px 10px 11.4px 93.8px;
+    background: #003051;
+
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    height: 100%;
+}
+
+ul li {
+    padding: 0 12px;
+    background: #fff;
+    height: 100%;
+    font-size: 14px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: .5s;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+ul li:hover {
+    background: #003051;
+}
+
+ul a:hover {
+    color: #fff;
+}
+
+ul a {
+    color: #1f2124;
+    text-decoration: none;
+}
+
+.content {
+    background: url(../img/equipo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 22%;
+    color: #fff;
+    height: 240px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.content::before {
+    content: '';
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to right, #003151d3, #003051);
+    position: absolute;
+}
+
+.title {
+    font-size: 40px;
+    font-weight: 800;
+    letter-spacing: 1.75px;
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+    translate: 80px;
+}
+
+.title::before {
+    content: '|';
+    color: #CD9D2B;
+    margin-right: 12px;
+}
+
+/* INFORMATION */
+
+.information {
+    height: 110vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.information-content {
+    width: 540px;
+    height: 540px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+}
+
+.information-content h2 {
+    font-size: 31px;
+    line-height: 31px;
+}
+
+.information-content p {
+    font-family: Gotham-Light;
+    font-size: 14px;
+    line-height: 21px;
+}
+
+.information-content img {
+    height: 160px;
+}
+
+.information-img {
+    background: url(../img/mundiales.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 540px;
+    height: 540px;
+    position: relative;
+}
+
+/* STANDING */
+
+.standing {
+    padding: 120px 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    align-items: center;
+    position: relative;
+    justify-items: center;
+    row-gap: 40px;
+}
+
+.standing::after {
+    content: 'Grupos';
+    position: absolute;
+    top: 8%;
+    left: 3%;
+    font-weight: bold;
+    font-size: 31px;
+    text-transform: uppercase;
+}
+
+.standing::before {
+    content: '';
+    background: linear-gradient(to right, #cd9c2ba9, #fff, #003151be);
+    position: absolute;
+    margin: auto 0;
+    width: 100%;
+    height: 120px;
+    z-index: -1;
+}
+
+.card {
+    width: 318px;
+    backdrop-filter: blur(15px);
+    box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.15);
+    font-family: Gotham-Light;
+}
+
+.card-header {
+    color: #fff;
+    padding: 12px 20px;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 100;
+    font-family: Gotham;
+}
+
+.card:nth-child(1),
+.card:nth-child(2) {
+    border: 1px solid #CD9D2B;
+}
+
+.card:nth-child(1)>.card-header,
+.card:nth-child(2)>.card-header {
+    background: #CD9D2B;
+}
+
+.card:nth-child(3),
+.card:nth-child(4) {
+    border: 1px solid #003051;
+}
+
+.card:nth-child(3)>.card-header,
+.card:nth-child(4)>.card-header {
+    background: #003051;
+}
+
+.card-content {
+    padding: 20px 22px;
+}
+
+.card-subheader {
+    text-align: end;
+    font-size: 12px;
+    margin-right: 4px;
+    display: flex;
+    gap: 18px;
+    justify-content: end;
+}
+
+.card-subheader p {
+    width: 10px;
+}
+
+.card-match {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    font-size: 15px;
+}
+
+.card-match img {
+    height: 30px;
+    width: 46px;
+}
+
+.card-match h4 {
+    font-weight: bold;
+    font-family: Gotham;
+}
+
+.card-match div {
+    gap: 18px;
+    display: flex;
+}
+
+.card-match div p {
+    width: 10px;
+}
+
+.card-match .img {
+    background: url(../img/Uar_rugby_logo23.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 25px;
+    width: 30px;
+    margin-right: -10px;
+}
+
+/* MATCHES */
+
+.matches {
+    border-top: 2px solid #CD9D2B;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 40px;
+    background: url("https://uar.com.ar/wp-content/uploads/FondoHuella-1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    padding: 60px 0;
+}
+
+.matches::before {
+    content: '';
+    background-color: #0031511e;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+}
+
+.matches h2 {
+    font-size: 41px;
+    text-transform: uppercase;
+}
+
+.match {
+    background: #003051;
+    border-bottom: 6px solid #CD9D2B;
+    color: #fff;
+    padding: 16px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.matches-a {
+    width: 340px;
+    border-right: 1px solid #CD9D2B;
+}
+
+.matches-b {
+    width: 340px;
+    font-size: 18px;
+}
+
+.matches-b p:nth-last-child(2) {
+    color: #CD9D2B;
+    font-family: Gotham-Light;
+    padding: 2px 0;
+}
+
+.matches-b p:nth-last-child(1) {
+    background: #fff;
+    display: inline;
+    color: #19194b;
+    padding: 0px 10px;
+}
+
+.matches-c {
+    width: 340px;
+    border-left: 1px solid #CD9D2B;
+    font-family: Gotham-Light;
+}
+
+footer {
+    background: #003051;
+    color: #fff;
+    text-align: end;
+    padding: 30px 16px;
+}
+
+@media only screen and (max-width: 1300px) and (min-width:1060px) {
+    .standing {
+        padding: 250px 0;
+        grid-template-columns: repeat(2, minmax(320px, 3fr));
+    }
+
+    .standing::before{
+        width: 0;
+    }
+}
+
+@media only screen and (max-width: 1060px) and (min-width:640px) {
+
+    nav img {
+        padding: 11.4px 10px;
+    }
+
+    .information {
+        flex-direction: column;
+        height: auto;
+        padding: 30px 0 0 0;
+    }
+
+    .information-content {
+        width: 80%;
+        height: auto;
+        gap: 20px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .information-img {
+        width: 80%;
+        height: 450px;
+    }
+    
+    .standing {
+        padding: 250px 0;
+        grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
+    }
+
+    .standing::before{
+        width: 0;
+    }
+
+    .match {
+        width: 90%;
+        justify-content: space-evenly;
+    }
+    
+}
+
+
+@media only screen and (max-width: 640px) {
+    nav img {
+        padding: 0 10px 0 2px;
+        object-fit: contain;
+        width: 120px;
+    }
+
+    ul li {
+        padding: 0px 6px;
+        font-size: 12px;
+    }
+
+    .content {
+        height: 140px;
+    }
+
+    .title {
+        font-size: 22px;
+        translate: 30px;
+    }
+
+    .title::before {
+        margin-right: 5px;
+    }
+
+    .information {
+        flex-direction: column;
+        height: auto;
+        padding: 30px 0 0 0;
+    }
+
+    .information-content {
+        width: 80%;
+        height: auto;
+        gap: 20px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .information-img {
+        width: 80%;
+        height: 300px;
+    }
+    
+    .standing::after{
+        top: 8%;
+        left: auto; 
+    }
+
+    .standing::before{
+        width: 0;
+    }
+
+    .standing {
+        padding: 250px 0;
+        grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    }
+
+    .match {
+        width: 90%;
+        justify-content: space-evenly;
+    }
+
+    .matches-a, .matches-b, .matches-c {
+        padding: 0 10px;
+    }
+}
