@@ -76,11 +76,11 @@ ul li:hover {
     background: #003051;
 }
 
-ul li:hover>a {
+ul a:hover {
     color: #fff;
 }
 
-ul li a {
+ul a {
     color: #1f2124;
     text-decoration: none;
 }
@@ -171,10 +171,12 @@ ul li a {
 
 .standing {
     padding: 120px 0;
-    display: flex;
-    justify-content: space-evenly;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     align-items: center;
     position: relative;
+    justify-items: center;
+    row-gap: 40px;
 }
 
 .standing::after {
@@ -288,12 +290,15 @@ ul li a {
 /* MATCHES */
 
 .matches {
+    border-top: 2px solid #CD9D2B;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     gap: 40px;
     background: url("https://uar.com.ar/wp-content/uploads/FondoHuella-1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
     background-attachment: fixed;
     position: relative;
     padding: 60px 0;
@@ -344,7 +349,7 @@ ul li a {
     background: #fff;
     display: inline;
     color: #19194b;
-    padding: 0px 16px;
+    padding: 0px 10px;
 }
 
 .matches-c {
@@ -360,9 +365,69 @@ footer {
     padding: 30px 16px;
 }
 
-@media only screen and (max-width: 660px) {
+@media only screen and (max-width: 1300px) and (min-width:1060px) {
+    .standing {
+        padding: 250px 0;
+        grid-template-columns: repeat(2, minmax(320px, 3fr));
+    }
+
+    .standing::before{
+        width: 0;
+    }
+}
+
+@media only screen and (max-width: 1060px) and (min-width:640px) {
+
     nav img {
-        padding: 11.4px 10px 11.4px 83.8px;
+        padding: 11.4px 10px;
+    }
+
+    .information {
+        flex-direction: column;
+        height: auto;
+        padding: 30px 0 0 0;
+    }
+
+    .information-content {
+        width: 80%;
+        height: auto;
+        gap: 20px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .information-img {
+        width: 80%;
+        height: 450px;
+    }
+    
+    .standing {
+        padding: 250px 0;
+        grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
+    }
+
+    .standing::before{
+        width: 0;
+    }
+
+    .match {
+        width: 90%;
+        justify-content: space-evenly;
+    }
+    
+}
+
+
+@media only screen and (max-width: 640px) {
+    nav img {
+        padding: 0 10px 0 2px;
+        object-fit: contain;
+        width: 120px;
+    }
+
+    ul li {
+        padding: 0px 6px;
+        font-size: 12px;
     }
 
     .content {
@@ -408,17 +473,15 @@ footer {
 
     .standing {
         padding: 250px 0;
-        display: flex;
-        flex-direction: column;
-        gap: 40px;
+        grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
     }
 
     .match {
-        margin: 0 20px;
+        width: 90%;
+        justify-content: space-evenly;
     }
 
     .matches-a, .matches-b, .matches-c {
-        width: 125px;
         padding: 0 10px;
     }
 }
