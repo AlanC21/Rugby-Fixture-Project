@@ -27,7 +27,7 @@ def index():
     status_mapping = {
         "Not Started": "No iniciado",
         "First Half": "Primer tiempo",
-        "Half Time": "Medio tiempo",
+        "HalfTime": "Medio tiempo",
         "Second Half": "Segundo tiempo",
         "Full Time": "Finalizado",
         "Postponed": "Pospuesto",
