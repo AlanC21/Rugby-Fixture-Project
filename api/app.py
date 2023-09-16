@@ -11,7 +11,7 @@ def index():
     url_fixture = "https://rugby-live-data.p.rapidapi.com/fixtures/1272/2024"
 
     headers = {
-	    "X-RapidAPI-Key": "124e2b01camsh8d5352d725e4cdbp108b62jsne7ea5dc22142",
+	    "X-RapidAPI-Key": "9f16cf938emsh99407a197f4d91ep1bccbajsna3df33a4601a",
 	    "X-RapidAPI-Host": "rugby-live-data.p.rapidapi.com"
     }
 
@@ -27,8 +27,8 @@ def index():
     status_mapping = {
         "Not Started": "No iniciado",
         "First Half": "Primer tiempo",
-        "Half Time": "Medio tiempo",
-        "Second Half": "Segundo tiempo",
+        "HalfTime": "Medio tiempo",
+        "Second half": "Segundo tiempo",
         "Full Time": "Finalizado",
         "Postponed": "Pospuesto",
         "Cancelled": "Cancelado",

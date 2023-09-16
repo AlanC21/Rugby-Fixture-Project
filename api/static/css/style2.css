@@ -371,7 +371,7 @@ footer {
         grid-template-columns: repeat(2, minmax(320px, 3fr));
     }
 
-    .standing::before{
+    .standing::before {
         width: 0;
     }
 }
@@ -400,13 +400,13 @@ footer {
         width: 80%;
         height: 450px;
     }
-    
+
     .standing {
         padding: 250px 0;
         grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
     }
 
-    .standing::before{
+    .standing::before {
         width: 0;
     }
 
@@ -414,7 +414,7 @@ footer {
         width: 90%;
         justify-content: space-evenly;
     }
-    
+
 }
 
 
@@ -461,13 +461,13 @@ footer {
         width: 80%;
         height: 300px;
     }
-    
-    .standing::after{
+
+    .standing::after {
         top: 8%;
-        left: auto; 
+        left: auto;
     }
 
-    .standing::before{
+    .standing::before {
         width: 0;
     }
 
@@ -481,7 +481,9 @@ footer {
         justify-content: space-evenly;
     }
 
-    .matches-a, .matches-b, .matches-c {
+    .matches-a,
+    .matches-b,
+    .matches-c {
         padding: 0 10px;
     }
 }
