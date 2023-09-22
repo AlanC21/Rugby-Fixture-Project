@@ -365,6 +365,15 @@ footer {
     padding: 30px 16px;
 }
 
+footer div {
+    text-align: start;
+    line-height: 20px;
+    display: block;
+    margin-bottom: 20px;
+    padding: 0px 10px 10px 10px;
+    font-size: 13px;
+}
+
 @media only screen and (max-width: 1300px) and (min-width:1060px) {
     .standing {
         padding: 250px 0;
@@ -485,5 +494,9 @@ footer {
     .matches-b,
     .matches-c {
         padding: 0 10px;
+    }
+
+    footer div {
+        font-size: 12px;
     }
 }
