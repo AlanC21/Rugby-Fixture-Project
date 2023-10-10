@@ -11,7 +11,7 @@ def index():
     url_fixture = "https://rugby-live-data.p.rapidapi.com/fixtures/1272/2024"
 
     headers = {
-	    "X-RapidAPI-Key": "cdeaaf4e02mshffcfe442dc1cba2p14985ajsndb3fa3629176",
+	    "X-RapidAPI-Key": "9f16cf938emsh99407a197f4d91ep1bccbajsna3df33a4601a",
 	    "X-RapidAPI-Host": "rugby-live-data.p.rapidapi.com"
     }
 
